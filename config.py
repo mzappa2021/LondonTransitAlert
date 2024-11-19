@@ -1,0 +1,39 @@
+import os
+
+# TFL API Configuration
+TFL_API_BASE_URL = "https://api.tfl.gov.uk"
+TFL_APP_KEY = os.getenv("TFL_APP_KEY", "your-tfl-app-key")
+
+# Lines to monitor
+MONITORED_LINES = [
+    "bakerloo",
+    "central",
+    "circle",
+    "district",
+    "hammersmith-city",
+    "jubilee",
+    "metropolitan",
+    "northern",
+    "piccadilly",
+    "victoria",
+    "waterloo-city"
+]
+
+# Telegram Configuration
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "your-telegram-bot-token")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "your-chat-id")
+
+# Scheduler Configuration
+SCHEDULES = [
+    {"hour": 15, "minute": 45},
+    {"hour": 16, "minute": 0}
+]
+
+# API Retry Configuration
+MAX_RETRIES = 3
+RETRY_DELAY = 5  # seconds
+
+# Logging Configuration
+LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+LOG_LEVEL = "INFO"
+LOG_FILE = "tfl_monitor.log"

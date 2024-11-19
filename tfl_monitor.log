@@ -1,0 +1,6 @@
+2024-11-19 19:38:25,673 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:38:25,673 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:38:25,673 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:38:25,677 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:38:25,677 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:38:25,678 - apscheduler.scheduler - INFO - Scheduler started

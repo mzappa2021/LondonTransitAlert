@@ -4,3 +4,155 @@
 2024-11-19 19:38:25,677 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
 2024-11-19 19:38:25,677 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
 2024-11-19 19:38:25,678 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:43:24,212 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:43:24,212 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:43:24,213 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:43:24,216 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:43:24,217 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:43:24,217 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:43:49,556 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:43:49,557 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:43:49,557 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:43:49,560 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:43:49,560 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:43:49,560 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:44:12,024 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:44:12,026 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:44:12,026 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:44:12,028 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:44:12,028 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:44:12,028 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:44:12,029 - root - INFO - Performing initial status check on startup
+2024-11-19 19:44:12,029 - root - INFO - Starting TFL status check
+2024-11-19 19:44:13,641 - tfl_client - ERROR - Error making request to https://api.tfl.gov.uk/StopPoint/910GWMSTD/Arrivals: 404, message='Not Found', url='https://api.tfl.gov.uk/StopPoint/910GWMSTD/Arrivals'
+2024-11-19 19:44:18,892 - tfl_client - ERROR - Error making request to https://api.tfl.gov.uk/StopPoint/910GWMSTD/Arrivals: 404, message='Not Found', url='https://api.tfl.gov.uk/StopPoint/910GWMSTD/Arrivals'
+2024-11-19 19:44:24,087 - tfl_client - ERROR - Error making request to https://api.tfl.gov.uk/StopPoint/910GWMSTD/Arrivals: 404, message='Not Found', url='https://api.tfl.gov.uk/StopPoint/910GWMSTD/Arrivals'
+2024-11-19 19:44:24,591 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:44:24,592 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:44:24,592 - root - INFO - TFL status check completed successfully
+2024-11-19 19:44:53,318 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:44:53,319 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:44:53,320 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:44:53,322 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:44:53,323 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:44:53,323 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:44:53,324 - root - INFO - Performing initial status check on startup
+2024-11-19 19:44:53,324 - root - INFO - Starting TFL status check
+2024-11-19 19:44:54,981 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:44:54,981 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:44:54,982 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:44:54,984 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:44:54,984 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:44:54,985 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:44:54,985 - root - INFO - Performing initial status check on startup
+2024-11-19 19:44:54,985 - root - INFO - Starting TFL status check
+2024-11-19 19:44:56,365 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:44:56,367 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:44:56,367 - root - INFO - TFL status check completed successfully
+2024-11-19 19:45:14,618 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:45:14,619 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:45:14,619 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:45:14,621 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:45:14,622 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:45:14,622 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:45:14,622 - root - INFO - Performing initial status check on startup
+2024-11-19 19:45:14,623 - root - INFO - Starting TFL status check
+2024-11-19 19:45:16,413 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:45:16,416 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:45:16,416 - root - INFO - TFL status check completed successfully
+2024-11-19 19:45:43,614 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:45:43,614 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:45:43,615 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:45:43,617 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:45:43,617 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:45:43,618 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:45:43,618 - root - INFO - Performing initial status check on startup
+2024-11-19 19:45:43,618 - root - INFO - Starting TFL status check
+2024-11-19 19:45:45,490 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:45:45,492 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:45:45,492 - root - INFO - TFL status check completed successfully
+2024-11-19 19:46:06,850 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:06,851 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:06,852 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:46:06,854 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:46:06,855 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:46:06,855 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:46:06,855 - root - INFO - Performing initial status check on startup
+2024-11-19 19:46:06,856 - root - INFO - Starting TFL status check
+2024-11-19 19:46:08,410 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:46:08,413 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:46:08,415 - root - INFO - TFL status check completed successfully
+2024-11-19 19:46:13,482 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:13,485 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:13,489 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:46:13,496 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:46:13,498 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:46:13,499 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:46:13,505 - root - INFO - Performing initial status check on startup
+2024-11-19 19:46:13,505 - root - INFO - Starting TFL status check
+2024-11-19 19:46:15,235 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:46:15,271 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:46:15,278 - root - INFO - TFL status check completed successfully
+2024-11-19 19:46:26,688 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:26,690 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:26,691 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:46:26,698 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:46:26,699 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:46:26,699 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:46:26,699 - root - INFO - Performing initial status check on startup
+2024-11-19 19:46:26,700 - root - INFO - Starting TFL status check
+2024-11-19 19:46:45,206 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:46:45,223 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:46:45,223 - root - INFO - TFL status check completed successfully
+2024-11-19 19:46:50,197 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:50,198 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:50,199 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:46:50,206 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:46:50,207 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:46:50,207 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:46:50,208 - root - INFO - Performing initial status check on startup
+2024-11-19 19:46:50,208 - root - INFO - Starting TFL status check
+2024-11-19 19:46:51,847 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:46:51,849 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:46:51,849 - root - INFO - TFL status check completed successfully
+2024-11-19 19:46:58,981 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:58,982 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:46:58,982 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:46:58,987 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:46:58,987 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:46:58,988 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:46:58,988 - root - INFO - Performing initial status check on startup
+2024-11-19 19:46:58,988 - root - INFO - Starting TFL status check
+2024-11-19 19:47:00,467 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:47:00,469 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:47:00,469 - root - INFO - TFL status check completed successfully
+2024-11-19 19:47:04,870 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:47:04,871 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:47:04,871 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:47:04,878 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:47:04,879 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:47:04,879 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:47:04,879 - root - INFO - Performing initial status check on startup
+2024-11-19 19:47:04,879 - root - INFO - Starting TFL status check
+2024-11-19 19:47:09,031 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:47:09,042 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:47:09,042 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:47:09,052 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:47:09,052 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:47:09,052 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:47:09,053 - root - INFO - Performing initial status check on startup
+2024-11-19 19:47:09,053 - root - INFO - Starting TFL status check
+2024-11-19 19:47:11,340 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:47:11,411 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:47:11,411 - root - INFO - TFL status check completed successfully
+2024-11-19 19:47:31,011 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:47:31,013 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-19 19:47:31,014 - root - INFO - Scheduled all status check jobs
+2024-11-19 19:47:31,024 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-19 19:47:31,025 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-19 19:47:31,028 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-19 19:47:31,029 - root - INFO - Performing initial status check on startup
+2024-11-19 19:47:31,029 - root - INFO - Starting TFL status check
+2024-11-19 19:47:32,478 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-19 19:47:32,480 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-19 19:47:32,480 - root - INFO - TFL status check completed successfully

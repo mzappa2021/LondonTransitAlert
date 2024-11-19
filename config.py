@@ -2,22 +2,16 @@ import os
 
 # TFL API Configuration
 TFL_API_BASE_URL = "https://api.tfl.gov.uk"
-TFL_APP_KEY = os.getenv("TFL_APP_KEY", "your-tfl-app-key")
 
 # Lines to monitor
 MONITORED_LINES = [
-    "bakerloo",
-    "central",
-    "circle",
-    "district",
-    "hammersmith-city",
-    "jubilee",
-    "metropolitan",
     "northern",
-    "piccadilly",
     "victoria",
-    "waterloo-city"
+    "london-overground"
 ]
+
+# Station IDs
+HIGHBURY_STATION_ID = "940GZZLUHBT"  # Highbury & Islington
 
 # Telegram Configuration
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "your-telegram-bot-token")

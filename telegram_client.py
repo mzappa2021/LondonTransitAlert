@@ -33,7 +33,7 @@ class TelegramClient:
                     logger.error("Max retries reached for sending Telegram message")
 
     def _format_status_message(self, statuses: List[Dict]) -> str:
-        """Format the status update as a readable message."""
+        """Format the status update as a readable message with detailed information."""
         message_parts = ["🚇 <b>TFL Line Status Update</b>\n"]
         
         for status in sorted(statuses, key=lambda x: x['line']):
@@ -46,7 +46,23 @@ class TelegramClient:
             if status['reason'] and status['reason'] != "No disruption":
                 message_parts.append(f"Reason: {status['reason']}")
             
-            message_parts.append("")
+            # Add disruptions if available
+            if 'disruptions' in status and status['disruptions']:
+                message_parts.append("\nDisruptions:")
+                for disruption in status['disruptions']:
+                    message_parts.append(f"• {disruption}")
+            
+            # Add arrivals if available
+            if 'arrivals' in status and status['arrivals']:
+                message_parts.append("\nNext Arrivals:")
+                for arrival in status['arrivals']:
+                    time_str = f"{arrival['time']} min" if arrival['time'] > 0 else "Due"
+                    message_parts.append(
+                        f"• {arrival['destination']} - {time_str} "
+                        f"(Platform {arrival['platform']})"
+                    )
+            
+            message_parts.append("")  # Add blank line between sections
         
         return "\n".join(message_parts)
 

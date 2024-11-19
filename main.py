@@ -52,14 +52,22 @@ class TFLMonitor:
             
         logger.info("Scheduled all status check jobs")
 
+    async def startup_check(self):
+        """Perform an initial check on startup."""
+        logger.info("Performing initial status check on startup")
+        await self.check_and_notify()
+
     def run(self):
         """Start the monitor service."""
         try:
             self.schedule_jobs()
             self.scheduler.start()
             
-            # Run the event loop
+            # Run initial check
             loop = asyncio.get_event_loop()
+            loop.run_until_complete(self.startup_check())
+            
+            # Run the event loop
             loop.run_forever()
             
         except (KeyboardInterrupt, SystemExit):

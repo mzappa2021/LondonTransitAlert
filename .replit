@@ -23,6 +23,10 @@ args = "Test Runner"
 task = "workflow.run"
 args = "GitHub Actions Verification"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "GitHub Setup Instructions"
+
 [[workflows.workflow]]
 name = "TFL Monitor"
 author = "agent"
@@ -64,6 +68,20 @@ task = "packager.installForAll"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "cat .github/workflows/test.yml .github/workflows/scheduled-monitor.yml"
+
+[[workflows.workflow]]
+name = "GitHub Setup Instructions"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "ls -la .github/workflows/"
 
 [deployment]
 run = ["sh", "-c", "python main.py"]

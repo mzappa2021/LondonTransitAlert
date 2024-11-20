@@ -1,29 +1,19 @@
 import logging
-from logging.handlers import RotatingFileHandler
-from config import LOG_FORMAT, LOG_LEVEL, LOG_FILE
+from config import LOG_FORMAT, LOG_LEVEL
 
 def setup_logging():
-    """Configure logging with both file and console handlers."""
+    """Configure logging with console handler for GitHub Actions."""
     logger = logging.getLogger()
     logger.setLevel(LOG_LEVEL)
 
-    # Create formatters and handlers
+    # Create formatter and console handler
     formatter = logging.Formatter(LOG_FORMAT)
     
-    # Rotating file handler
-    file_handler = RotatingFileHandler(
-        LOG_FILE,
-        maxBytes=1024 * 1024,  # 1MB
-        backupCount=5
-    )
-    file_handler.setFormatter(formatter)
-    
-    # Console handler
+    # Console handler for GitHub Actions logging
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(formatter)
     
-    # Add handlers to the logger
-    logger.addHandler(file_handler)
+    # Add handler to the logger
     logger.addHandler(console_handler)
     
     return logger

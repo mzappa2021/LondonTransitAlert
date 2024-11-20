@@ -30,4 +30,3 @@ RETRY_DELAY = 5  # seconds
 # Logging Configuration
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 LOG_LEVEL = "INFO"
-LOG_FILE = "tfl_monitor.log"

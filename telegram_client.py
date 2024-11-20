@@ -1,6 +1,7 @@
 import logging
 from telegram import Bot
 from telegram.error import TelegramError
+from telegram.constants import ParseMode
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, MAX_RETRIES, RETRY_DELAY
 import asyncio
 from typing import Dict, List
@@ -9,28 +10,45 @@ logger = logging.getLogger(__name__)
 
 class TelegramClient:
     def __init__(self):
-        self.bot = Bot(token=TELEGRAM_BOT_TOKEN)
+        self.token = TELEGRAM_BOT_TOKEN
         self.chat_id = TELEGRAM_CHAT_ID
+        self.bot = Bot(token=self.token)
+
+    async def initialize(self):
+        """Initialize the bot instance"""
+        try:
+            # Test the bot token by getting bot information
+            await self.bot.get_me()
+            logger.info("Successfully initialized Telegram bot")
+        except TelegramError as e:
+            logger.error(f"Failed to initialize Telegram bot: {str(e)}")
+            raise
 
     async def send_status_update(self, statuses: List[Dict]):
         """Send formatted status update to Telegram channel."""
-        message = self._format_status_message(statuses)
-        
-        for attempt in range(MAX_RETRIES):
-            try:
-                await self.bot.send_message(
-                    chat_id=self.chat_id,
-                    text=message,
-                    parse_mode='HTML'
-                )
-                logger.info("Status update sent successfully to Telegram")
-                break
-            except TelegramError as e:
-                logger.error(f"Failed to send Telegram message: {str(e)}")
-                if attempt < MAX_RETRIES - 1:
-                    await asyncio.sleep(RETRY_DELAY)
-                else:
-                    logger.error("Max retries reached for sending Telegram message")
+        try:
+            await self.initialize()
+            message = self._format_status_message(statuses)
+            
+            for attempt in range(MAX_RETRIES):
+                try:
+                    await self.bot.send_message(
+                        chat_id=self.chat_id,
+                        text=message,
+                        parse_mode=ParseMode.HTML
+                    )
+                    logger.info("Status update sent successfully to Telegram")
+                    break
+                except TelegramError as e:
+                    logger.error(f"Failed to send Telegram message: {str(e)}")
+                    if attempt < MAX_RETRIES - 1:
+                        await asyncio.sleep(RETRY_DELAY)
+                    else:
+                        logger.error("Max retries reached for sending Telegram message")
+                        raise
+        except Exception as e:
+            logger.error(f"Error in send_status_update: {str(e)}")
+            raise
 
     def _format_status_message(self, statuses: List[Dict]) -> str:
         """Format the status update as a readable message with detailed information."""

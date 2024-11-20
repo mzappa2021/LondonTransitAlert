@@ -1,0 +1,51 @@
+name: TFL Scheduled Monitor
+
+on:
+  schedule:
+    # Run at 15:45 and 16:00 London time on weekdays
+    - cron: '45 15 * * 1-5'
+    - cron: '0 16 * * 1-5'
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run TFL Monitor
+      run: |
+        python -c "
+        import asyncio
+        from main import TFLMonitor
+        
+        async def run_monitor():
+            try:
+                monitor = TFLMonitor()
+                await monitor.check_and_notify()
+            except Exception as e:
+                print(f'Error running monitor: {str(e)}')
+                exit(1)
+            
+        asyncio.run(run_monitor())
+        "
+      
+    - name: Handle run failure
+      if: failure()
+      run: |
+        echo "TFL Monitor run failed. Check the logs for details."
+        exit 1

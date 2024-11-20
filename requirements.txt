@@ -1,0 +1,7 @@
+aiohttp>=3.8.0
+python-telegram-bot>=20.0
+APScheduler>=3.10.0
+pytz>=2023.3
+flake8
+pytest
+pytest-asyncio

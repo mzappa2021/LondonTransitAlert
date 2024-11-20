@@ -253,3 +253,26 @@
 2024-11-20 13:27:57,595 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
 2024-11-20 13:27:57,604 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
 2024-11-20 13:27:57,604 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:28:04,973 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:28:04,974 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:28:04,975 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:28:04,977 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-20 14:28:04,977 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-20 14:28:04,978 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-20 14:28:04,978 - root - INFO - Performing initial status check on startup
+2024-11-20 14:28:04,978 - root - INFO - Starting TFL status check
+2024-11-20 14:28:07,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-20 14:28:07,823 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:28:07,824 - root - INFO - TFL status check completed successfully
+2024-11-20 14:36:23,247 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:36:23,249 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:36:23,250 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:36:32,295 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:36:32,296 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:36:32,296 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:36:40,522 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:36:40,523 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:36:40,523 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:36:52,627 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:36:52,628 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:36:52,629 - root - INFO - Scheduled all status check jobs

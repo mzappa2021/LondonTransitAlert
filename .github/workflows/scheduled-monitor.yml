@@ -3,8 +3,9 @@ name: TFL Scheduled Monitor
 on:
   schedule:
     # Run at 15:45 and 16:00 London time on weekdays
-    - cron: '45 15 * * 1-5'
-    - cron: '0 16 * * 1-5'
+    - cron: '40 15 * * 1,2,4,5'
+    - cron: '55 15 * * 1,2,4,5'
+    - cron: '0 17 * * 3'
 
 jobs:
   monitor:

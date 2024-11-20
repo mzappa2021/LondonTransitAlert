@@ -34,9 +34,23 @@ jobs:
         # exit-zero treats all errors as warnings
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
         
-    - name: Run tests
+    - name: Run tests with coverage
       run: |
-        pytest -v
+        pip install pytest-cov
+        pytest -v --cov=. --cov-report=xml
+        
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage.xml
+        
+    - name: Upload test logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-logs
+        path: tfl_monitor.log
 
     - name: Test application startup
       run: |

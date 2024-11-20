@@ -276,3 +276,208 @@
 2024-11-20 14:36:52,627 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
 2024-11-20 14:36:52,628 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
 2024-11-20 14:36:52,629 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:40:02,410 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:40:02,413 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:40:02,413 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:40:02,416 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-20 14:40:02,424 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-20 14:40:02,424 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-20 14:40:02,427 - root - INFO - Performing initial status check on startup
+2024-11-20 14:40:02,427 - root - INFO - Starting TFL status check
+2024-11-20 14:40:04,732 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-20 14:40:04,733 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:40:04,733 - root - INFO - TFL status check completed successfully
+2024-11-20 14:40:19,626 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:40:19,627 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:40:19,628 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:40:19,630 - apscheduler.scheduler - INFO - Added job "TFL Status Check 15:45" to job store "default"
+2024-11-20 14:40:19,631 - apscheduler.scheduler - INFO - Added job "TFL Status Check 16:00" to job store "default"
+2024-11-20 14:40:19,631 - apscheduler.scheduler - INFO - Scheduler started
+2024-11-20 14:40:19,632 - root - INFO - Performing initial status check on startup
+2024-11-20 14:40:19,632 - root - INFO - Starting TFL status check
+2024-11-20 14:40:21,816 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:40:21,818 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:40:21,818 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:40:25,036 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7887884776:AAHVCXWS2j-yurX5VePsEX8VcC_oPlNbOXw/sendMessage "HTTP/1.1 200 OK"
+2024-11-20 14:40:25,037 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:40:25,037 - root - INFO - TFL status check completed successfully
+2024-11-20 14:40:50,304 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:40:50,305 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:40:50,306 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:40:50,474 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:41:22,446 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:41:22,448 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:41:22,449 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:41:22,635 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:41:22,647 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:41:27,653 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:41:32,658 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:41:32,826 - root - INFO - Starting TFL status check
+2024-11-20 14:41:32,830 - root - INFO - TFL status check completed successfully
+2024-11-20 14:41:42,286 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:41:42,290 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:41:42,291 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:41:42,992 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:41:43,045 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:41:48,058 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:41:51,512 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:41:51,515 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:41:51,516 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:41:51,717 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:41:51,736 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:41:56,746 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:01,752 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:02,122 - root - INFO - Starting TFL status check
+2024-11-20 14:42:02,123 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:42:07,096 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:07,100 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:07,106 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:42:07,475 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:42:07,540 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:12,822 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:12,824 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:12,824 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:42:13,020 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:42:13,041 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:18,048 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:23,054 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:23,174 - root - INFO - Starting TFL status check
+2024-11-20 14:42:23,177 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:42:27,487 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:27,490 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:27,491 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:42:27,619 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:42:27,632 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:33,738 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:33,741 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:33,744 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:42:33,921 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:42:33,938 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:38,947 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:43,953 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:44,122 - root - INFO - Starting TFL status check
+2024-11-20 14:42:44,123 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:42:48,075 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:48,080 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:48,082 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:42:48,282 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:42:48,298 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:50,328 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:50,330 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:42:50,330 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:42:50,531 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:42:50,550 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:42:55,557 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:00,563 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:00,709 - root - INFO - Starting TFL status check
+2024-11-20 14:43:00,710 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:43:04,483 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:04,484 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:04,485 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:43:04,608 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:43:04,620 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:09,626 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:11,269 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:11,270 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:11,271 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:43:11,427 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:43:11,447 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:16,454 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:21,460 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:21,640 - root - INFO - Starting TFL status check
+2024-11-20 14:43:21,642 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:43:31,619 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:31,635 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:31,636 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:43:31,881 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:43:31,898 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:36,905 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:41,911 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:42,035 - root - INFO - Starting TFL status check
+2024-11-20 14:43:42,036 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:43:50,743 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:50,744 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:50,745 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:43:50,892 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:43:50,904 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:52,751 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:52,753 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:43:52,753 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:43:52,909 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:43:52,925 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:43:57,932 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:44:02,938 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:44:03,053 - root - INFO - Starting TFL status check
+2024-11-20 14:44:03,053 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:51:42,866 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:51:42,873 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:51:42,877 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:51:43,100 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:51:43,127 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:51:44,946 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:51:44,949 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:51:44,951 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:51:45,091 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:51:45,106 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:51:50,113 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:51:55,118 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:51:55,238 - root - INFO - Starting TFL status check
+2024-11-20 14:51:55,241 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:52:04,119 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:04,128 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:04,130 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:52:04,254 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:52:04,267 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:06,140 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:06,143 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:06,143 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:52:06,290 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:52:06,305 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:11,311 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:16,318 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:16,411 - root - INFO - Starting TFL status check
+2024-11-20 14:52:16,411 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:52:19,115 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:19,117 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:19,117 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:52:19,246 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:52:19,262 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:21,190 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:21,191 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:21,191 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:52:21,302 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:52:21,317 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:26,322 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:31,328 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:31,443 - root - INFO - Starting TFL status check
+2024-11-20 14:52:31,447 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:52:32,885 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:32,888 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:32,889 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:52:33,052 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:52:33,072 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:34,827 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:34,829 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:34,830 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:52:34,956 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:52:34,978 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:39,985 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:44,992 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:45,154 - root - INFO - Starting TFL status check
+2024-11-20 14:52:45,157 - root - ERROR - Error in check_and_notify: test_check_and_notify.<locals>.mock_send_update() takes 1 positional argument but 2 were given
+2024-11-20 14:52:48,184 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:48,188 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:48,189 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:52:48,301 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:52:48,325 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:50,167 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:50,169 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:52:50,169 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:52:50,353 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:52:50,368 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:52:55,374 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol
+2024-11-20 14:53:03,305 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:53:03,306 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-11-20 14:53:03,307 - root - INFO - Scheduled all status check jobs
+2024-11-20 14:53:03,429 - telegram_client - INFO - Status update sent successfully to Telegram
+2024-11-20 14:53:03,442 - tfl_client - ERROR - Error making request to test_url: 'coroutine' object does not support the asynchronous context manager protocol

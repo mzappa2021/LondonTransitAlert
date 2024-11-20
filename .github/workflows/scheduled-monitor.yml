@@ -2,9 +2,10 @@ name: TFL Scheduled Monitor
 
 on:
   schedule:
-    # Run at 15:45 and 16:00 London time on weekdays
-    - cron: '45 15 * * 1-5'
-    - cron: '0 16 * * 1-5'
+    # Run at 15:45 and 16:00 UTC time on weekdays (adjusted for London time)
+    - cron: '45 14 * * 1-5'  # 15:45 London time (UTC+1)
+    - cron: '0 15 * * 1-5'   # 16:00 London time (UTC+1)
+  workflow_dispatch:  # Allow manual trigger for testing
 
 jobs:
   monitor:
@@ -31,17 +32,42 @@ jobs:
       run: |
         python -c "
         import asyncio
+        import traceback
+        import sys
         from main import TFLMonitor
         
         async def run_monitor():
             try:
                 monitor = TFLMonitor()
                 await monitor.check_and_notify()
+                print('Monitor check completed successfully')
             except Exception as e:
                 print(f'Error running monitor: {str(e)}')
-                exit(1)
+                print('Traceback:')
+                traceback.print_exc(file=sys.stdout)
+                sys.exit(1)
             
         asyncio.run(run_monitor())
+        "
+      
+    - name: Send Telegram notification on failure
+      if: failure()
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        python -c "
+        import asyncio
+        from telegram.ext import Application
+        
+        async def send_notification():
+            application = Application.builder().token('${{ secrets.TELEGRAM_BOT_TOKEN }}').build()
+            await application.bot.send_message(
+                chat_id='${{ secrets.TELEGRAM_CHAT_ID }}',
+                text='❌ GitHub Actions workflow failed. Please check the logs.'
+            )
+            
+        asyncio.run(send_notification())
         "
       
     - name: Handle run failure

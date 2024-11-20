@@ -1,5 +1,5 @@
 import logging
-from telegram.ext import Application
+from telegram import Bot
 from telegram.error import TelegramError
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, MAX_RETRIES, RETRY_DELAY
 import asyncio
@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 class TelegramClient:
     def __init__(self):
-        self.application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
+        self.bot = Bot(token=TELEGRAM_BOT_TOKEN)
         self.chat_id = TELEGRAM_CHAT_ID
 
     async def send_status_update(self, statuses: List[Dict]):
@@ -18,7 +18,7 @@ class TelegramClient:
         
         for attempt in range(MAX_RETRIES):
             try:
-                await self.application.bot.send_message(
+                await self.bot.send_message(
                     chat_id=self.chat_id,
                     text=message,
                     parse_mode='HTML'

@@ -57,7 +57,7 @@ task = "packager.installForAll"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "pytest -v --cov=. --cov-report=term-missing"
+args = "pytest -v"
 
 [[workflows.workflow]]
 name = "GitHub Actions Verification"

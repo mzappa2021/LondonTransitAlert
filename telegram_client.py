@@ -52,7 +52,7 @@ class TelegramClient:
 
     def _format_status_message(self, statuses: List[Dict]) -> str:
         """Format the status update as a readable message with detailed information."""
-        message_parts = ["🚇 <b>TFL Line Status Update</b>\n"]
+        message_parts = ["🚇 <b>TFL Line Status Update Mr Lorenzo</b>\n"]
         
         for status in sorted(statuses, key=lambda x: x['line']):
             emoji = self._get_status_emoji(status['status'])

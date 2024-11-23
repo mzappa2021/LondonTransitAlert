@@ -88,7 +88,7 @@ class TFLClient:
         }
 
     async def get_overground_info(self, session: aiohttp.ClientSession) -> Dict:
-    """Fetch Overground information specifically for Liverpool Street to Chingford."""
+        """Fetch Overground information specifically for Liverpool Street to Chingford."""
         status = await self.get_line_status("london-overground", session)
         disruptions = await self.get_line_disruptions("london-overground", session)
     

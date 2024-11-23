@@ -88,23 +88,28 @@ class TFLClient:
         }
 
     async def get_overground_info(self, session: aiohttp.ClientSession) -> Dict:
-        """Fetch comprehensive Overground information."""
-        status = await self.get_line_status("london-overground", session)
-        disruptions = await self.get_line_disruptions("london-overground", session)
-
-        # Filter disruptions to include only those affecting Liverpool Street or Chingford
-        affected_stations = ["Liverpool Street", "Chingford"]
-        filtered_disruptions = [
-            disruption for disruption in disruptions
-            if any(station in disruption for station in affected_stations)
-        ]
-
-        return {
-            "line": "london-overground",
-            "status": status["status"],
-            "reason": status["reason"],
-            "disruptions": filtered_disruptions
-        }
+    """Fetch Overground information specifically for Liverpool Street to Chingford."""
+    status = await self.get_line_status("london-overground", session)
+    disruptions = await self.get_line_disruptions("london-overground", session)
+    
+    # Filter disruptions for Liverpool Street - Chingford route
+    filtered_disruptions = []
+    keywords = ['liverpool street', 'chingford', 'lea bridge', 'clapton', 
+                'st james street', 'walthamstow central', 'wood street', 
+                'highams park']
+    
+    for disruption in disruptions:
+        # Convert to lowercase for case-insensitive comparison
+        disruption_lower = disruption.lower()
+        if any(keyword in disruption_lower for keyword in keywords):
+            filtered_disruptions.append(disruption)
+    
+    return {
+        "line": "london-overground",
+        "status": status["status"],
+        "reason": status["reason"] if any(filtered_disruptions) else "No disruption on Liverpool St - Chingford route",
+        "disruptions": filtered_disruptions if filtered_disruptions else ["No disruptions on Liverpool St - Chingford route"]
+    }
 
     async def get_all_line_statuses(self, lines: List[str]) -> List[Dict]:
         """Fetch comprehensive information for all specified lines."""

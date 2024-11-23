@@ -91,12 +91,19 @@ class TFLClient:
         """Fetch comprehensive Overground information."""
         status = await self.get_line_status("london-overground", session)
         disruptions = await self.get_line_disruptions("london-overground", session)
-        
+
+        # Filter disruptions to include only those affecting Liverpool Street or Chingford
+        affected_stations = ["Liverpool Street", "Chingford"]
+        filtered_disruptions = [
+            disruption for disruption in disruptions
+            if any(station in disruption for station in affected_stations)
+        ]
+
         return {
             "line": "london-overground",
             "status": status["status"],
             "reason": status["reason"],
-            "disruptions": disruptions
+            "disruptions": filtered_disruptions
         }
 
     async def get_all_line_statuses(self, lines: List[str]) -> List[Dict]:

@@ -12,6 +12,7 @@ MONITORED_LINES = [
 
 # Station IDs
 HIGHBURY_STATION_ID = "940GZZLUHBT"  # Highbury & Islington
+WALTHAMSTOW_STATION_ID = "910GWALTMCN"  # Walthamstow Central Overground
 
 # Telegram Configuration
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "your-telegram-bot-token")

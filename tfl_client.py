@@ -89,12 +89,12 @@ class TFLClient:
 
     async def get_overground_info(self, session: aiohttp.ClientSession) -> Dict:
     """Fetch Overground information specifically for Liverpool Street to Chingford."""
-    status = await self.get_line_status("london-overground", session)
-    disruptions = await self.get_line_disruptions("london-overground", session)
+        status = await self.get_line_status("london-overground", session)
+        disruptions = await self.get_line_disruptions("london-overground", session)
     
-    # Filter disruptions for Liverpool Street - Chingford route
-    filtered_disruptions = []
-    keywords = ['liverpool street', 'chingford', 'lea bridge', 'clapton', 
+        # Filter disruptions for Liverpool Street - Chingford route
+        filtered_disruptions = []
+        keywords = ['liverpool street', 'chingford', 'lea bridge', 'clapton', 
                 'st james street', 'walthamstow central', 'wood street', 
                 'highams park']
     
@@ -107,7 +107,7 @@ class TFLClient:
     return {
         "line": "london-overground",
         "status": status["status"],
-        "reason": status["reason"] if any(filtered_disruptions) else "No disruption on Liverpool St - Chingford route",
+        "reason": status["reason"] if filtered_disruptions else "No disruption on Liverpool St - Chingford route",
         "disruptions": filtered_disruptions if filtered_disruptions else ["No disruptions on Liverpool St - Chingford route"]
     }
 

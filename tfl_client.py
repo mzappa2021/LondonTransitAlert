@@ -72,7 +72,7 @@ class TFLClient:
             "status": status["status"],
             "reason": status["reason"],
             "disruptions": disruptions,
-            "arrivals": arrivals[:3]  # Only show next 3 arrivals
+            "arrivals": arrivals[:2]  # Only show next 2 arrivals
         }
 
     async def get_victoria_line_info(self, session: aiohttp.ClientSession) -> Dict:

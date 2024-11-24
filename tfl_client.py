@@ -1,10 +1,12 @@
 import aiohttp
 import asyncio
 import logging
+import datetime
+import pytz
 from typing import Dict, List, Optional
 from config import (
     TFL_API_BASE_URL, MAX_RETRIES, RETRY_DELAY,
-    HIGHBURY_STATION_ID
+    HIGHBURY_STATION_ID, WALTHAMSTOW_STATION_ID
 )
 
 logger = logging.getLogger(__name__)
@@ -86,30 +88,72 @@ class TFLClient:
             "reason": status["reason"],
             "disruptions": disruptions
         }
-
+    async def get_walthamstow_arrivals(self, session: aiohttp.ClientSession) -> List[Dict]:
+    """
+    Fetch arrivals at Walthamstow station for trains to Chingford between 17:00-17:30.
+    """
+    data = await self.get_station_arrivals(WALTHAMSTOW_STATION_ID, session)
+    
+    if not data:
+        return []
+    
+    filtered_arrivals = []
+    london_tz = pytz.timezone('Europe/London')
+    
+    for arrival in data:
+        try:
+            # Parse the expected arrival time
+            arrival_time = arrival.get('expectedArrival', '')
+            if not arrival_time:
+                continue
+                
+            time_obj = datetime.datetime.fromisoformat(arrival_time.replace('Z', '+00:00'))
+            london_time = time_obj.astimezone(london_tz)
+            
+            # Check if arrival is between 17:00 and 17:30
+            if (london_time.hour == 17 and 
+                0 <= london_time.minute <= 30 and 
+                'Chingford' in arrival.get('destinationName', '')):
+                
+                filtered_arrivals.append({
+                    "destination": arrival.get("destinationName", "Unknown"),
+                    "expected_arrival": london_time.strftime("%H:%M"),
+                    "platform": arrival.get("platformName", "Unknown"),
+                    "time_to_station": int(arrival.get("timeToStation", 0) / 60),  # minutes
+                    "current_location": arrival.get("currentLocation", "Unknown")
+                })
+        except (ValueError, TypeError) as e:
+            logger.error(f"Error processing arrival time: {e}")
+            continue
+    
+        # Sort by expected arrival time
+        return sorted(filtered_arrivals, key=lambda x: x['expected_arrival'])
+    
     async def get_overground_info(self, session: aiohttp.ClientSession) -> Dict:
-        """Fetch Overground information specifically for Liverpool Street to Chingford."""
-        status = await self.get_line_status("london-overground", session)
-        disruptions = await self.get_line_disruptions("london-overground", session)
-        
-        # Filter disruptions for Liverpool Street - Chingford route
-        filtered_disruptions = []
-        keywords = ['liverpool street', 'chingford', 'lea bridge', 'clapton', 
-                    'st james street', 'walthamstow central', 'wood street', 
-                    'highams park']
-        
-        for disruption in disruptions:
-            # Convert to lowercase for case-insensitive comparison
-            disruption_lower = disruption.lower()
-            if any(keyword in disruption_lower for keyword in keywords):
-                filtered_disruptions.append(disruption)
-        
-        return {
-            "line": "london-overground",
-            "status": status["status"],
-            "reason": status["reason"] if filtered_disruptions else "No disruption on Liverpool St - Chingford route",
-            "disruptions": filtered_disruptions if filtered_disruptions else ["No disruptions on Liverpool St - Chingford route"]
-        }
+    """Fetch Overground information specifically for Liverpool Street to Chingford."""
+    status = await self.get_line_status("london-overground", session)
+    disruptions = await self.get_line_disruptions("london-overground", session)
+    walthamstow_arrivals = await self.get_walthamstow_arrivals(session)
+    
+    # Filter disruptions for Liverpool Street - Chingford route
+    filtered_disruptions = []
+    keywords = ['liverpool street', 'chingford', 'lea bridge', 'clapton', 
+                'st james street', 'walthamstow central', 'wood street', 
+                'highams park']
+    
+    for disruption in disruptions:
+        # Convert to lowercase for case-insensitive comparison
+        disruption_lower = disruption.lower()
+        if any(keyword in disruption_lower for keyword in keywords):
+            filtered_disruptions.append(disruption)
+    
+    return {
+        "line": "london-overground",
+        "status": status["status"],
+        "reason": status["reason"] if filtered_disruptions else "No disruption on Liverpool St - Chingford route",
+        "disruptions": filtered_disruptions if filtered_disruptions else ["No disruptions on Liverpool St - Chingford route"],
+        "walthamstow_evening_arrivals": walthamstow_arrivals
+    }
 
     async def get_all_line_statuses(self, lines: List[str]) -> List[Dict]:
         """Fetch comprehensive information for all specified lines."""

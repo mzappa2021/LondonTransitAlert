@@ -107,8 +107,8 @@ class TFLClient:
         return {
             "line": "london-overground",
             "status": status["status"],
-            "reason": status["reason"] if filtered_disruptions else "No disruption on Liverpool St -                   Chingford route",
-            "disruptions": filtered_disruptions if filtered_disruptions else ["No disruptions on                       Liverpool St - Chingford route"]
+            "reason": status["reason"] if filtered_disruptions else "No disruption on Liverpool St -Chingford route",
+            "disruptions": filtered_disruptions if filtered_disruptions else ["No disruptions on Liverpool St-Chingford route"]
         }
 
     async def get_all_line_statuses(self, lines: List[str]) -> List[Dict]:
